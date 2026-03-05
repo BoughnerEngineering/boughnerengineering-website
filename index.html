@@ -2,13 +2,183 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Vite + React + TS</title>
+		<meta
+			name="description"
+			content="Boughner Engineering is a freelance engineering company delivering precise, modern technical solutions."
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<title>Boughner Engineering</title>
 	</head>
-
 	<body>
-		<div id="root"></div>
-		<script type="module" src="/src/react-app/main.tsx"></script>
+		<header class="site-header">
+			<div class="container nav-container">
+				<a class="brand" href="#hero">Boughner Engineering</a>
+				<nav class="site-nav" aria-label="Main navigation">
+					<a href="#about">About</a>
+					<a href="#services">Services</a>
+					<a href="#projects">Projects</a>
+					<a href="#contact">Contact</a>
+				</nav>
+				<button class="nav-toggle" aria-label="Toggle menu">☰</button>
+			</div>
+		</header>
+
+		<main>
+			<section id="hero" class="hero section">
+				<div class="animated-gradient" aria-hidden="true"></div>
+				<div class="container hero-content reveal">
+					<p class="eyebrow">Freelance Engineering</p>
+					<h1>Boughner Engineering</h1>
+					<p class="hero-subtitle">Engineering Solutions Built with Precision</p>
+					<p class="hero-copy">
+						[Placeholder] Add a short value proposition describing your niche,
+						technical expertise, and the outcomes you create for clients.
+					</p>
+					<a class="button primary" href="#contact">Work With Me</a>
+				</div>
+			</section>
+
+			<section id="about" class="section">
+				<div class="container">
+					<div class="section-header reveal">
+						<p class="eyebrow">About</p>
+						<h2>Modern Engineering Expertise</h2>
+					</div>
+					<div class="about-layout">
+						<p class="about-copy reveal">
+							[Placeholder] Insert your company story, engineering background,
+							and approach to solving complex technical challenges. Highlight
+							how you partner with clients from concept through deployment.
+						</p>
+						<div class="specialties-grid">
+							<article class="card reveal">
+								<div class="icon">⚙️</div>
+								<h3>Architecture</h3>
+								<p>[Placeholder] Scalable, reliable system design.</p>
+							</article>
+							<article class="card reveal">
+								<div class="icon">🔒</div>
+								<h3>Reliability</h3>
+								<p>[Placeholder] Resilient engineering and risk reduction.</p>
+							</article>
+							<article class="card reveal">
+								<div class="icon">📈</div>
+								<h3>Performance</h3>
+								<p>[Placeholder] Optimized delivery and measurable impact.</p>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="services" class="section alt">
+				<div class="container">
+					<div class="section-header reveal">
+						<p class="eyebrow">Services</p>
+						<h2>What I Can Build for You</h2>
+					</div>
+					<div class="services-grid">
+						<article class="card reveal">
+							<div class="icon">💻</div>
+							<h3>Software Development</h3>
+							<p>[Placeholder] Custom applications tailored to business goals.</p>
+						</article>
+						<article class="card reveal">
+							<div class="icon">🧠</div>
+							<h3>Systems Engineering</h3>
+							<p>[Placeholder] End-to-end system planning and integration.</p>
+						</article>
+						<article class="card reveal">
+							<div class="icon">🤖</div>
+							<h3>Automation Solutions</h3>
+							<p>[Placeholder] Workflow automation for efficiency and scale.</p>
+						</article>
+						<article class="card reveal">
+							<div class="icon">☁️</div>
+							<h3>Infrastructure &amp; DevOps</h3>
+							<p>[Placeholder] Deployment, observability, and cloud operations.</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section id="projects" class="section">
+				<div class="container">
+					<div class="section-header reveal">
+						<p class="eyebrow">Portfolio</p>
+						<h2>Selected Projects</h2>
+					</div>
+					<div class="projects-grid">
+						<article class="project-card reveal">
+							<div class="project-image" role="img" aria-label="Project preview placeholder"></div>
+							<h3>Project Title One</h3>
+							<p>[Placeholder] Brief summary of challenge and solution.</p>
+							<a href="#" class="button ghost">View Details</a>
+						</article>
+						<article class="project-card reveal">
+							<div class="project-image" role="img" aria-label="Project preview placeholder"></div>
+							<h3>Project Title Two</h3>
+							<p>[Placeholder] Brief summary of challenge and solution.</p>
+							<a href="#" class="button ghost">View Details</a>
+						</article>
+						<article class="project-card reveal">
+							<div class="project-image" role="img" aria-label="Project preview placeholder"></div>
+							<h3>Project Title Three</h3>
+							<p>[Placeholder] Brief summary of challenge and solution.</p>
+							<a href="#" class="button ghost">View Details</a>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section id="contact" class="section alt">
+				<div class="container contact-layout">
+					<div class="section-header reveal">
+						<p class="eyebrow">Contact</p>
+						<h2>Let’s Build Something Great</h2>
+						<p>
+							Email: <a href="mailto:hello@placeholder.com">hello@placeholder.com</a>
+						</p>
+						<div class="social-links">
+							<a href="#">LinkedIn</a>
+							<a href="#">GitHub</a>
+							<a href="#">X / Twitter</a>
+						</div>
+					</div>
+					<form class="contact-form reveal" action="#" method="post">
+						<label for="name">Name</label>
+						<input id="name" name="name" type="text" placeholder="Your name" required />
+
+						<label for="email">Email</label>
+						<input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+						<label for="message">Message</label>
+						<textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+
+						<button type="submit" class="button primary">Send Message</button>
+					</form>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container footer-content">
+				<p>© <span id="year"></span> Boughner Engineering</p>
+				<nav aria-label="Footer navigation">
+					<a href="#hero">Home</a>
+					<a href="#services">Services</a>
+					<a href="#contact">Contact</a>
+				</nav>
+			</div>
+		</footer>
+
+		<script type="module" src="script.js"></script>
 	</body>
 </html>
